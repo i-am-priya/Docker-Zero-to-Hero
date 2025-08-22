@@ -377,30 +377,24 @@ sudo docker version
 O/P:
 Client:
  Version:           25.0.8
- API version:       1.44
- Go version:        go1.24.4
- Git commit:        0bab007
- Built:             Wed Jun 18 00:00:00 2025
- OS/Arch:           linux/amd64
- Context:           default
-
-Server:
- Engine:
-  Version:          25.0.8
-  API version:      1.44 (minimum version 1.24)
-  Go version:       go1.24.4
-  Git commit:       71907ca
-  Built:            Wed Jun 18 00:00:00 2025
-  OS/Arch:          linux/amd64
-  Experimental:     false
- containerd:
-  Version:          2.0.5
-  GitCommit:        fb4c30d4ede3531652d86197bf3fc9515e5276d9
- runc:
-  Version:          1.2.6
-  GitCommit:        6c52b3fc541fb26fe8c374d5f58112a0a5dbda66
- docker-init:
-  Version:          0.19.0
-  GitCommit:        de40ad0
-
+  
 install git and configure for cloning repo.
+
+after creating images and running container , remove the image 
+docker rmi -f <image>
+docker images
+
+OTHER RELEVANT COMMANDS:
+-------------------------
+docker ps
+docker ps -a
+
+# foreground/attached mode:
+  docker run <image> sleep 20
+
+# Background/Detached mode:
+  docker run -d <image> : latest sleep 20
+
+# Interactive mode:
+  docker run -it <image> : latest bash
+  docker run -it <image> : latest sleep 30
