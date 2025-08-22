@@ -403,3 +403,4 @@ Server:
   Version:          0.19.0
   GitCommit:        de40ad0
 
+install git and configure for cloning repo.
