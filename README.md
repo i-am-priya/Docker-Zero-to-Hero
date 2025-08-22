@@ -366,27 +366,33 @@ latest: digest: sha256:6e49841ad9e720a7baedcd41f9b666fcd7b583151d0763fe78101bb82
 INSTALL DOCKER ON LINUX2023 EC2 INSTANCE
 
 sudo yum update -y
+
 sudo dnf install -y docker
 
 START AND ENABLE DOCKER
+
 sudo systemctl enable --now docker
 
 VERIFY DOCKER WORKS
+
 sudo systemctl status docker
+
 sudo docker version
-O/P:
-Client:
+
  Version:           25.0.8
   
 install git and configure for cloning repo.
 
-after creating images and running container , remove the image 
+after creating images and running container , remove the image
+
 docker rmi -f <image>
+
 docker images
 
 OTHER RELEVANT COMMANDS:
 -------------------------
 docker ps
+
 docker ps -a
 
 # foreground/attached mode:
@@ -397,4 +403,5 @@ docker ps -a
 
 # Interactive mode:
   docker run -it <image> : latest bash
+  
   docker run -it <image> : latest sleep 30
