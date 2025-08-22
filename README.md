@@ -360,3 +360,46 @@ latest: digest: sha256:6e49841ad9e720a7baedcd41f9b666fcd7b583151d0763fe78101bb82
 ```
 
 ### You must be feeling like a champ already 
+
+#################################################################################
+
+INSTALL DOCKER ON LINUX2023 EC2 INSTANCE
+
+sudo yum update -y
+sudo dnf install -y docker
+
+START AND ENABLE DOCKER
+sudo systemctl enable --now docker
+
+VERIFY DOCKER WORKS
+sudo systemctl status docker
+sudo docker version
+O/P:
+Client:
+ Version:           25.0.8
+ API version:       1.44
+ Go version:        go1.24.4
+ Git commit:        0bab007
+ Built:             Wed Jun 18 00:00:00 2025
+ OS/Arch:           linux/amd64
+ Context:           default
+
+Server:
+ Engine:
+  Version:          25.0.8
+  API version:      1.44 (minimum version 1.24)
+  Go version:       go1.24.4
+  Git commit:       71907ca
+  Built:            Wed Jun 18 00:00:00 2025
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          2.0.5
+  GitCommit:        fb4c30d4ede3531652d86197bf3fc9515e5276d9
+ runc:
+  Version:          1.2.6
+  GitCommit:        6c52b3fc541fb26fe8c374d5f58112a0a5dbda66
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+
